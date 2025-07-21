@@ -24,6 +24,6 @@ router.delete('/:id', AutenticacaoMiddleware.autenticarToken, AutorizarMiddlewar
 router.put('/:id/status', AutenticacaoMiddleware.autenticarToken, AutorizarMiddleware.autorizar(['Tecnico']), ordemServicoController.atualizarStatus)
 
 //Atribuir tecnico
-router.put('/id:/atribuir', AutenticacaoMiddleware.autenticarToken, AutorizarMiddleware.autorizar(['Tecnico']), ordemServicoController.atribuirTecnico)
+router.put('/:id/atribuir', AutenticacaoMiddleware.autenticarToken, AutorizarMiddleware.autorizar(['Tecnico']), ordemServicoController.atribuirTecnico)
 
 module.exports = router 

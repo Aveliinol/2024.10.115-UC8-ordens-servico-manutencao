@@ -1,4 +1,4 @@
-const ServicoModel = require("../models/servico.models.js");
+const ServicoModel = require("../models/ordemservico.model");
 
 class OrdemServicoController {
     static async criarServico(req, res) {

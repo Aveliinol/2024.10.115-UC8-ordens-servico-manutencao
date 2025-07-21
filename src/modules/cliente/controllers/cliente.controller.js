@@ -13,21 +13,6 @@ class ClienteController{
             res.status(500).json({msg: "Erro do servidor. Tente novamente mais tarde!", erro: error.message})
         }
     }
-    static async perfil(req, res){
-        try {
-            const { id } = req.cliente
-            const cliente = await Cliente.findOne({
-                where: {id},
-                attributes: ['nome', 'email', 'id']
-            });
-            if(!cliente){
-                return res.status(401).json({msg: "Não existe Cliente no sistema!"})
-            }
-            res.status(200).json(cliente);
-        } catch (error) {
-            res.status(500).json({msg: "Erro do servidor. Tente novamente mais tarde!"})
-        }
-    }
 }
 
 module.exports = ClienteController

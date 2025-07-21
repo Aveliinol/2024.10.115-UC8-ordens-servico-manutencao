@@ -1,28 +1,25 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const cors = require('cors');
+const app = express();
 const { sequelize } = require('./src/config/configDB.js');
 const authRoute = require('./src/modules/autenticacao/routes/autenticacao.route.js');
 const usuarioRoute = require('./src/modules/usuario/routes/usuario.route.js');
 const servicoRoute = require('./src/modules/ordemServico/routes/ordemServico.route.js');
 const tecnicoRoute = require('./src/modules/tecnico/routes/tecnico.route.js');
+const clienteRoute = require('./src/modules/cliente/routes/cliente.route.js');
 
 dotenv.config();
 
-const app = express();
-app.use(cors({
-    origin: 'http://localhost:5173', 
-    credentials: true              
-}));
-
 app.use(express.json());
 
-app.use('/usuarios/', usuarioRoute);
 app.use('/auth/', authRoute);
-app.use('/ordens-servico/', servicoRoute);
+app.use('/usuarios/', usuarioRoute);
+app.use('/clientes/', clienteRoute);
 app.use('/tecnicos/', tecnicoRoute);
+app.use('/ordens-servico/', servicoRoute);
 
-const PORTA = process.env.PORTA;
+
+const PORTA = process.env.PORT;
 app.listen(PORTA, async () => {
     try {
         await sequelize.authenticate();

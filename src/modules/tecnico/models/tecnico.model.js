@@ -18,10 +18,6 @@ const Tecnico = sequelize.define(
                 key: 'id'
             }
         },
-        papel: {
-            type: DataTypes.STRING,
-            defaultValue: 'tecnico'
-        },
         area_atuacao: {
             type: DataTypes.STRING,
             allowNull: false,

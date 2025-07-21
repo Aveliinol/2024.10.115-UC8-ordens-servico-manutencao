@@ -34,13 +34,23 @@ const Usuario = sequelize.define(
     senha: {
       type: DataTypes.STRING,
       allowNull: false,
-      validade: {
+      validate: {
         is: {
-          args: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/,
-          msg: "A senha deve ter no mínimo 6 caracteres, com letra maiúscula, minúscula, número e caractere especial.",
+          args: /^[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{6,}$/,
+          msg: "A senha deve ter no mínimo 6 caracteres e pode conter letras, números e caracteres especiais.",
         },
       }
     },
+    papel: {
+      type: DataTypes.ENUM("cliente", "tecnico"),
+      allowNull: false,
+      validate: {
+        isIn: {
+          args: [["cliente", "tecnico"]],
+          msg: "O papel deve ser 'cliente' ou 'tecnico'."
+        }
+      }
+    }
   },
   {
     tableName: "usuario",

@@ -18,10 +18,6 @@ const Cliente = sequelize.define(
         key: 'id'
       }
     },
-    papel: {
-      type: DataTypes.STRING,
-      defaultValue: 'cliente'
-    },
     endereco: {
       type: DataTypes.STRING,
       allowNull: false,
