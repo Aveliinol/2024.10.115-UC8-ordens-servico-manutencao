@@ -92,7 +92,7 @@ O servidor estará disponível em:
 ### Ordens de Serviço
 - **POST** `/ordens-servico/`: Criação de ordens de serviço.
 - **PUT** `/ordens-servico/:id`: Edição de ordens de serviço.
-- **GET** `/ordens-servico/`: Listagem de todas as ordens de serviço.
+- **GET** `/ordens-servico/:id`: Listagem de todas as ordens de serviço (passa ID do cliente ou tecnico).
 - **GET** `/ordens-servico/:id`: Visualização de uma ordem de serviço por ID.
 - **DELETE** `/ordens-servico/:id`: Exclusão de ordens de serviço.
 - **PUT** `/ordens-servico/:id/status`: Atualização do status de uma ordem de serviço.
