@@ -3,11 +3,11 @@ const ServicoModel = require("../models/ordemservico.model");
 class OrdemServicoController {
     static async criarServico(req, res) {
         try {
-            const { cliente_id, endereco, tipo_servico, data_solicitada, status } = req.body;
-            if (!cliente_id || !endereco || !tipo_servico || !data_solicitada || !status) {
+            const { cliente_id, endereco, tipo_servico, data_solicitada, status, tecnico_id } = req.body;
+            if (!cliente_id || !endereco || !tipo_servico || !data_solicitada ) {
                 return res.status(400).json({ msg: "Todos os campos devem ser preenchidos" });
             }
-            const servico = await ServicoModel.create({ cliente_id, endereco, tipo_servico, data_solicitada, status });
+            const servico = await ServicoModel.create({ cliente_id, endereco, tipo_servico, data_solicitada, status, tecnico_id });
             res.status(200).json(servico);
         } catch (error) {
             res.status(500).json({ msg: "Erro no sistema. Tente novamente mais tarde!" });
@@ -25,9 +25,6 @@ class OrdemServicoController {
                 return res.status(400).json({ msg: "Apenas serviços pendentes podem ser atualizados" });
             }
             const { endereco, tipo_servico, data_solicitada } = req.body;
-            if ( !endereco || !tipo_servico || !data_solicitada ) {
-                return res.status(400).json({ msg: "Todos os campos devem ser preenchidos" });
-            }
             const updateService = await servico.update({ endereco, tipo_servico, data_solicitada });
             res.status(200).json(updateService);
         } catch (error) {
@@ -95,7 +92,7 @@ class OrdemServicoController {
             if (servico.status !== "pendente") {
                 return res.status(400).json({ msg: "Apenas serviços pendentes podem ser atribuídos" });
             }
-            const updatedServico = await servico.update({ tecnico_id, status: "atribuido" });
+            const updatedServico = await servico.update({ tecnico_id });
             res.status(200).json(updatedServico);
         } catch (error) {
             res.status(500).json({ msg: "Erro no sistema. Tente novamente mais tarde!", erro: error.message });

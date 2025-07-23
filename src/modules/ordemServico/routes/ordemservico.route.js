@@ -9,7 +9,7 @@ const router = express.Router();
 router.post('/', AutenticacaoMiddleware.autenticarToken, ordemServicoController.criarServico)
 
 //Editar serviço
-router.put('/:id', AutenticacaoMiddleware.autenticarToken,AutorizarMiddleware.autorizar(['Cliente']), ordemServicoController.editarServico)
+router.put('/:id', AutenticacaoMiddleware.autenticarToken,AutorizarMiddleware.autorizar(['cliente']), ordemServicoController.editarServico)
 
 //Listar Todos os serviço
 router.get('/', AutenticacaoMiddleware.autenticarToken, ordemServicoController.listarServicos)
@@ -18,12 +18,12 @@ router.get('/', AutenticacaoMiddleware.autenticarToken, ordemServicoController.l
 router.get('/:id', AutenticacaoMiddleware.autenticarToken, ordemServicoController.listarServicoPorId)
 
 //Deletar serviço
-router.delete('/:id', AutenticacaoMiddleware.autenticarToken, AutorizarMiddleware.autorizar(['Cliente']), ordemServicoController.deletarServico)
+router.delete('/:id', AutenticacaoMiddleware.autenticarToken, AutorizarMiddleware.autorizar(['cliente']), ordemServicoController.deletarServico)
 
 //atualizar status 
-router.put('/:id/status', AutenticacaoMiddleware.autenticarToken, AutorizarMiddleware.autorizar(['Tecnico']), ordemServicoController.atualizarStatus)
+router.put('/:id/status', AutenticacaoMiddleware.autenticarToken, AutorizarMiddleware.autorizar(['tecnico']), ordemServicoController.atualizarStatus)
 
 //Atribuir tecnico
-router.put('/:id/atribuir', AutenticacaoMiddleware.autenticarToken, AutorizarMiddleware.autorizar(['Tecnico']), ordemServicoController.atribuirTecnico)
+router.put('/:id/atribuir', AutenticacaoMiddleware.autenticarToken, AutorizarMiddleware.autorizar(['tecnico']), ordemServicoController.atribuirTecnico)
 
 module.exports = router 

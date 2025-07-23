@@ -22,7 +22,7 @@ class UsuarioController{
                 where: {id},
                 attributes: ['id','nome', 'email', 'papel']
             });
-            if(!tecnico){
+            if(!usuario){
                 return res.status(401).json({msg: "Não existe Usuario no sistema!"})
             }
             res.status(200).json(usuario);

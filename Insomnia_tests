@@ -1,0 +1,432 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1741626687548
+  modified: 1741626687548
+  description: ""
+collection:
+  - name: Curso
+    meta:
+      id: fld_e54ddb85c9c74c8abe02962efc4dca55
+      created: 1744044250409
+      modified: 1744044250409
+      sortKey: -1744044250409
+      description: ""
+    children:
+      - name: Endereço
+        meta:
+          id: fld_40d24f43d29c439caa5c19d6ffc6e915
+          created: 1743450628996
+          modified: 1744044266055
+          sortKey: -1744044258577
+          description: ""
+      - name: Aluno
+        meta:
+          id: fld_4c07e51ee1c04f2d880b8b182816d060
+          created: 1743451025825
+          modified: 1744044258507
+          sortKey: -1744044258477
+          description: ""
+  - name: Autenticação
+    meta:
+      id: fld_350320d53c7a4481963a8e34acb405b0
+      created: 1750877955582
+      modified: 1750877955582
+      sortKey: -1750877955582
+      description: ""
+  - name: Manutenção Residencial
+    meta:
+      id: fld_c7ba53701a914ffc8c2473230e68cd89
+      created: 1751481585687
+      modified: 1751481585687
+      sortKey: -1751481585687
+      description: ""
+    children:
+      - name: Ordem Serviço
+        meta:
+          id: fld_421814250203455aaab912dfd74ac426
+          created: 1753291730483
+          modified: 1753292018707
+          sortKey: -1753291730483
+          description: ""
+        children:
+          - url: http://localhost:3000/ordens-servico/1
+            name: Deletar Serviço
+            meta:
+              id: req_c5d33f9f38aa4f9bbfd8bb814dba6a31
+              created: 1753291738254
+              modified: 1753293959342
+              isPrivate: false
+              description: ""
+              sortKey: -1753291738254
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwibm9tZSI6IkphbWVzIGtvYmUiLCJlbWFpbCI6IkphbWVzMTIzNEBnbWFpbC5jb20iLCJwYXBlbCI6ImNsaWVudGUiLCJpYXQiOjE3NTMyOTM4OTMsImV4cCI6MTc1MzI5NDAxM30.FlonMuFMknzAhpldIHcX9cMvqyEJdo3wp94AHskeX_8
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens-servico/1
+            name: Listar por Id
+            meta:
+              id: req_ff49c73210164d32af5e01137b73488c
+              created: 1753291743364
+              modified: 1753293685793
+              isPrivate: false
+              description: ""
+              sortKey: -1753291743364
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwibm9tZSI6IkphbWVzIGtvYmUiLCJlbWFpbCI6IkphbWVzMTIzNEBnbWFpbC5jb20iLCJwYXBlbCI6ImNsaWVudGUiLCJpYXQiOjE3NTMyOTM2NTUsImV4cCI6MTc1MzI5Mzc3NX0.KCllK5SyjhtqWjmmZyWNkqmcyKcZRMleQEIT8ltnemQ
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens-servico/1
+            name: Listar Todos os Serviços
+            meta:
+              id: req_7d6afdedbde1495db8918ef7f11059ed
+              created: 1753291745406
+              modified: 1753293904947
+              isPrivate: false
+              description: ""
+              sortKey: -1753291745406
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.3.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwibm9tZSI6IkphbWVzIGtvYmUiLCJlbWFpbCI6IkphbWVzMTIzNEBnbWFpbC5jb20iLCJwYXBlbCI6ImNsaWVudGUiLCJpYXQiOjE3NTMyOTM4OTMsImV4cCI6MTc1MzI5NDAxM30.FlonMuFMknzAhpldIHcX9cMvqyEJdo3wp94AHskeX_8
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens-servico/:id/status
+            name: Atualizar Status
+            meta:
+              id: req_a162f5fd810e43d8bf609d9c216076f1
+              created: 1753291747382
+              modified: 1753293425011
+              isPrivate: false
+              description: ""
+              sortKey: -1753291747382
+            method: PUT
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+            pathParameters:
+              - name: id
+                value: ""
+          - url: http://localhost:3000/ordens-servico/1/atribuir
+            name: Atribuir Tecnico
+            meta:
+              id: req_dff1b5b06e3e44e8863c634346a11a7a
+              created: 1753291749302
+              modified: 1753293391689
+              isPrivate: false
+              description: ""
+              sortKey: -1753291749302
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"tecnico_id": 1
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6IkphbWVzIiwiZW1haWwiOiJKYW1lczEyM0BnbWFpbC5jb20iLCJwYXBlbCI6InRlY25pY28iLCJpYXQiOjE3NTMyOTMzODMsImV4cCI6MTc1MzI5MzUwM30.zL2i1WkWneJfcmYXtJmaQGX5Vl1WNAZwI6H7wU3SiWs
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens-servico/1
+            name: Atualizar Serviço
+            meta:
+              id: req_9887f453c20340ff860b9a5ab7b485b1
+              created: 1753291772308
+              modified: 1753293525019
+              isPrivate: false
+              description: ""
+              sortKey: -1753291772308
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"endereco": "Av. paraiba 231"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwibm9tZSI6IkphbWVzIGtvYmUiLCJlbWFpbCI6IkphbWVzMTIzNEBnbWFpbC5jb20iLCJwYXBlbCI6ImNsaWVudGUiLCJpYXQiOjE3NTMyOTM1MDAsImV4cCI6MTc1MzI5MzYyMH0.iNUg-GZsir-ZEHg1V_N3x6y-ViuYubmBLIbT-m5VYJk
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/ordens-servico/
+            name: Criar Serviço
+            meta:
+              id: req_bf8a61ec754641b6858e5a558f26c008
+              created: 1753291774581
+              modified: 1753293156412
+              isPrivate: false
+              description: ""
+              sortKey: -1753291774581
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"cliente_id": 1,
+                	"endereco": "av. paraiba, 123",
+                	"tipo_servico": "outro",
+                	"data_solicitada": "2025-12-06"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwibm9tZSI6IkphbWVzIGtvYmUiLCJlbWFpbCI6IkphbWVzMTIzNEBnbWFpbC5jb20iLCJwYXBlbCI6ImNsaWVudGUiLCJpYXQiOjE3NTMyOTMxNDQsImV4cCI6MTc1MzI5MzI2NH0.SmOl1ILWW5hsHlBU8MEC8Y9xv68XbPr_6QUmSwM8wEU
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - url: http://localhost:3000/usuarios/
+        name: Cadastrar
+        meta:
+          id: req_96205feeb84942e39f5fd9dbea2cfc9f
+          created: 1751481609361
+          modified: 1753292852387
+          isPrivate: false
+          description: ""
+          sortKey: -1751481609361
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "James kobe",
+            	"email": "James1234@gmail.com",
+            	"senha": "Gp@2025",
+            	"papel": "cliente"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/clientes/
+        name: Cadastrar Cliente
+        meta:
+          id: req_a83bccbf954b4ecaa9cbfd0a3903a164
+          created: 1751484003403
+          modified: 1753292652878
+          isPrivate: false
+          description: ""
+          sortKey: -1751484003403
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"usuario_id": "2",
+            	"endereco": "Avenida paraiba, 123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/tecnicos/
+        name: Cadastrar Tecnico
+        meta:
+          id: req_e5fea985ca364bf085bc9aa93cf82fde
+          created: 1751907794059
+          modified: 1753124698778
+          isPrivate: false
+          description: ""
+          sortKey: -1751907794059
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"usuario_id": "1",
+            	"area_atuacao": "Geral"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.2.0
+        authentication:
+          type: bearer
+          token: ""
+          disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/auth/login
+        name: Login
+        meta:
+          id: req_bfdc113bf3704af5955ee73d3bf45919
+          created: 1753119810578
+          modified: 1753293891217
+          isPrivate: false
+          description: ""
+          sortKey: -1753119810578
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email": "James1234@gmail.com",
+            	"senha": "Gp@2025"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/usuarios/me/1
+        name: Perfil
+        meta:
+          id: req_b039a6bc9fb8436f9b7d65c894d7d539
+          created: 1753120046518
+          modified: 1753293324869
+          isPrivate: false
+          description: ""
+          sortKey: -1753120046518
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        authentication:
+          type: bearer
+          token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibm9tZSI6IkphbWVzIiwiZW1haWwiOiJKYW1lczEyM0BnbWFpbC5jb20iLCJwYXBlbCI6InRlY25pY28iLCJpYXQiOjE3NTMyOTMyODcsImV4cCI6MTc1MzI5MzQwN30.dLcv4c6rPwlGk4M-JdxRNptauLeRGUNSDIqNtKrRkkU
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742240042594
+    modified: 1753293893559
+  cookies:
+    - key: refreshToken
+      value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwibm9tZSI6IkphbWVzIGtvYmUiLCJlbWFpbCI6IkphbWVzMTIzNEBnbWFpbC5jb20iLCJwYXBlbCI6ImNsaWVudGUiLCJpYXQiOjE3NTMyOTM4OTMsImV4cCI6MTc1MzM4MDI5M30.Y-ZOea-PlJrx1Wx2jg22O40xb4BK-ePFSdBgKasoEV0
+      maxAge: 86400
+      domain: localhost
+      path: /
+      secure: true
+      hostOnly: true
+      creation: 2025-06-25T20:08:01.233Z
+      lastAccessed: 2025-07-23T18:04:53.559Z
+      id: c0efad21-b91b-4ba9-b683-96ac129314ea
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1742240042464
+    modified: 1742240042464
+    isPrivate: false

@@ -39,7 +39,8 @@ class AutenticacaoController {
             const dadosUsuario = {
                 id: usuario.id,
                 nome: usuario.nome,
-                email: usuario.email
+                email: usuario.email,
+                papel: usuario.papel
             }
             
             const tokenAcesso = AutenticacaoController.gerarTokenAcesso(dadosUsuario)
@@ -55,7 +56,8 @@ class AutenticacaoController {
             res.status(200).json({
                 tokenAcesso,
                 nome: usuario.nome,
-                id: usuario.id
+                id: usuario.id,
+                papel: usuario.papel
             })
         } catch (error) {
             res.status(500).json({ msg: 'Erro do servidor. Tente novamente mais tarde!' })
@@ -76,7 +78,8 @@ class AutenticacaoController {
                 }
                 const dadosUsuario = {
                     id: usuario.id,
-                    nome: usuario.nome
+                    nome: usuario.nome,
+                    papel: usuario.papel
                 }
                 const novoTokenAcesso = AutenticacaoController.gerarTokenAcesso(dadosUsuario)
                 res.status(200).json({ tokenAcesso: novoTokenAcesso })
