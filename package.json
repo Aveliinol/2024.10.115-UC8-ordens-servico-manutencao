@@ -12,7 +12,9 @@
   "version": "1.0.0",
   "description": "Este projeto é um sistema para gerenciamento de ordens de serviço de manutenção, permitindo o cadastro de usuários, técnicos, clientes e ordens de serviço, além de autenticação e autorização.",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "sequelize-cli": "^6.6.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
