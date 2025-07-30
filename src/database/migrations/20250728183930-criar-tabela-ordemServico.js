@@ -5,13 +5,13 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('ordemServico', {
        id: {
-                  type: DataTypes.INTEGER,
+                  type: Sequelize.INTEGER,
                   primaryKey: true,
                   autoIncrement: true,
                   allowNull: false,
               },
               cliente_id: {
-                  type: DataTypes.INTEGER,
+                  type: Sequelize.INTEGER,
                   allowNull: false,
                   references: {
                       model: 'cliente',
@@ -19,27 +19,27 @@ module.exports = {
                   }
               },
               endereco: {
-                  type: DataTypes.STRING,
+                  type: Sequelize.STRING,
                   allowNull: false,
                 },
               tipo_servico: {
-                  type: DataTypes.ENUM('elétrica', 'hidráulica', 'outro'),
+                  type: Sequelize.ENUM('elétrica', 'hidráulica', 'outro'),
                   allowNull: false,
               },
               data_solicitada: {
-                  type: DataTypes.DATEONLY,
+                  type: Sequelize.DATEONLY,
                   allowNull: false,
                   validate: {
                       isDate: true
                   }
               },
               status: {
-                  type: DataTypes.ENUM('pendente', 'em andamento', 'finalizada'),
+                  type: Sequelize.ENUM('pendente', 'em andamento', 'finalizada'),
                   allowNull: false,
                   defaultValue: 'pendente',
               },
               tecnico_id: {
-                  type: DataTypes.INTEGER,
+                  type: Sequelize.INTEGER,
                   references: {
                       model: 'tecnico',
                       key: 'id'

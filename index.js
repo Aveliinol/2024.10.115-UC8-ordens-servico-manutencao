@@ -19,7 +19,7 @@ app.use('/tecnicos/', tecnicoRoute);
 app.use('/ordens-servico/', servicoRoute);
 
 
-const PORTA = process.env.PORT;
+const PORTA = process.env.PORTA;
 app.listen(PORTA, async () => {
     try {
         await sequelize.authenticate();

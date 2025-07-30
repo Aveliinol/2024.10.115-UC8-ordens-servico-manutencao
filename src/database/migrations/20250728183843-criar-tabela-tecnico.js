@@ -5,13 +5,13 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('tecnico', {
       id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
     },
     usuario_id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         allowNull: false,
         references: {
             model: 'usuario',
@@ -19,7 +19,7 @@ module.exports = {
         }
     },
     area_atuacao: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false,
     }
       });
